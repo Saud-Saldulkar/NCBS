@@ -1,4 +1,3 @@
-
 % extract distance data
 
 % Calculate (euclidean)distance data for each data point with reference to

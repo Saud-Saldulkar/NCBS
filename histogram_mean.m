@@ -1,4 +1,4 @@
-% mean of 3 histograms(line fitting)
+% mean of 3 histograms
 % dependency: random_generator.m
 
 % ----------------------------------------------------------
@@ -115,12 +115,4 @@ end
 % ----------------------------------------------------------
 
 
-
-
-
-
-% subplot(3,3,2), hist(data,60); xlim([0 250]);
-% subplot(3,3,4), hist(one,60); xlim([0 250]);
-% subplot(3,3,5), hist(two,60); xlim([0 250]);
-% subplot(3,3,6), hist(three,60); xlim([0 250]);
 

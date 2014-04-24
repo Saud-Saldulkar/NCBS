@@ -1,4 +1,6 @@
 function [result] = calculate_angle(origin_vector, data_vector, quadrant)
+% calculate angle for specific quadrant i.e. angle(ouput) range is ONLY 
+% between 0 to 90 degrees
 % ----------------------------------------------------------
 origin_x = origin_vector(1);
 origin_y = origin_vector(2);
