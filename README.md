@@ -1,2 +1,3 @@
-Matlab files related to the search behaviour experiments @ NCBS
-===============================================================
+************************************************************
+**Files related to the search behaviour experiments @ NCBS**
+************************************************************
