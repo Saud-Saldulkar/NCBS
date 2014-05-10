@@ -1,6 +1,4 @@
 function isolate_straight_returns(file_name, upper_threshold, lower_threshold, image_suffix, is_random, random_x, random_y)
-% To isolate straight lines in two concentric circular arena(hence upper and lower thresholds) 
-
 
 % -----------------------------------------------------------------------------------------------------------------------------
 load(file_name);

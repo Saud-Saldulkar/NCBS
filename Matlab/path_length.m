@@ -1,4 +1,5 @@
 function track_length = path_length(file_name)
+% calculate the total path travelled in euclidean distance by using arc length method. 
 
 load(file_name)
 

@@ -1,5 +1,5 @@
 % control to check if the matlab data output from CTRAX is reliable
-% i.e. has the correct range of the required frames
+
 % clean up code 
 close all;
 clc; 
