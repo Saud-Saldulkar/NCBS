@@ -15,14 +15,16 @@ function [output] = plot_degree_vs_time(file_name, bin_size1, bin_size2)
     load(file_name);
     
     theta1 = convert_rad_degrees(theta);
-       
-    theta2 = relative_turning(theta1, bin_size1);
 
-    theta3 = extract_mean(theta2, bin_size2);
+    theta2 = convert_negative_angles(theta1);
     
-    theta4 = extract_std_error(theta3, bin_size2);
+    theta3 = relative_turning(theta2, bin_size1);
+
+    theta4 = extract_mean(theta3, bin_size2);
+
+    theta5 = extract_std_error(theta4, bin_size2);    
     
-    output = theta4;
+    output = theta5;
 end
 
 function [output] = convert_rad_degrees(input)
@@ -80,4 +82,15 @@ function [output] = extract_std_error(theta, bin_size2)
        theta(i,3) = (theta(i,2)/ sqrt(bin_size2));
    end
    output = theta;
+end
+
+function [output] = convert_negative_angles(theta)    
+    
+    for i = 1:length(theta)
+        if (sign(theta(i,1)) == -1)
+            theta(i,1) = theta(i,1) + 360;
+        end
+    end
+    
+    output = theta;
 end
