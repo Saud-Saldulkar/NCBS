@@ -1,4 +1,3 @@
-% Extract First 60 sec data [batch process]
 clc;
 clear all;
 close all;
