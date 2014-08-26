@@ -1,4 +1,6 @@
 function [output] = extract_fly_dance_index(file_no, coordinate_file_name)
+%   Extract Fly Dance Index for each data point
+
     file_name = strcat('n', int2str(file_no), '.mat');
     load(file_name);
     load(coordinate_file_name);
