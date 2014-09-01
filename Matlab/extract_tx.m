@@ -1,3 +1,5 @@
+% Extract subset data in (x)seconds (ONLY WORKS FOR THETA DATA)
+
 clc;
 clear all;
 close all;
