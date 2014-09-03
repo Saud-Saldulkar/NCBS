@@ -128,6 +128,6 @@ function plot_print_data(file_no, output, to_lim, x_lim, y_lim)
     
     file_name = strcat('Experiment No', int2str(file_no), '.png');
     
-    set(gcf,'PaperPosition',[0,0,15,13]);
+    set(gcf,'PaperPosition',[0,0,18,16]);
     print(gcf,'-r0','-dpng',file_name);
 end
