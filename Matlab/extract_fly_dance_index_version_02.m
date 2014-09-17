@@ -23,16 +23,16 @@ function [output] = extract_fly_dance_index_version_02(file_no, coordinate_file_
         data.y = y_pos(start_frame:end_frame, 1);
         
         total_distance = calculate_total_distance(data.x, data.y);
-
+        
         direct_distance = calculate_direct_distance(file_no, coordinates, x_pos, y_pos, data);
-      
+        
         vectorial_angle = calculate_angle(data);
         
         total_walking_time = no_frames / camera_frame_rate;
         
         locomotive_time = calculate_locomotive_time(data, bin_duration, camera_frame_rate);
         
-        fly_dance_index(iter,1) = (total_distance / (direct_distance * vectorial_angle)) * ( total_walking_time / locomotive_time);
+        fly_dance_index(iter,1) = (total_distance / (direct_distance * vectorial_angle)) * ( locomotive_time / total_walking_time);
         
         start_frame = end_frame + 1;
    
