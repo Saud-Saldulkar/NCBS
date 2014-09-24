@@ -16,9 +16,8 @@ for i = 1:no_files
         if (sign(theta(i,1)) == -1)
             theta(i,1) = theta(i,1) + 360;
         end
-    end
-    
-    save(file_name, 'theta');
+    end   
+    save(file_name, 'theta', 'x_pos', 'y_pos');
 end
 
 clearvars;
