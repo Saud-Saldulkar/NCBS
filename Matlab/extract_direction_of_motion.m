@@ -22,10 +22,7 @@ function [output] = extract_direction_of_motion(file_no, coordinate_file)
     end
     
     direction_of_motion = post_processing(origin, x_pos, y_pos, direction_of_motion);
-       
-    for i = 1:length(theta)
-        output(i,1) = theta(i,1) - direction_of_motion(i,1);
-    end
+
     output  = direction_of_motion;
 end
 
