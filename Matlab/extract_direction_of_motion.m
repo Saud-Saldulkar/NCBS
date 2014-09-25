@@ -1,4 +1,4 @@
-function [output] = circling_score(file_no, coordinate_file)
+function [output] = extract_direction_of_motion(file_no, coordinate_file)
     file_name = strcat('n', int2str(file_no), '.mat');
     load(file_name);
     load(coordinate_file);
@@ -26,8 +26,7 @@ function [output] = circling_score(file_no, coordinate_file)
     for i = 1:length(theta)
         output(i,1) = theta(i,1) - direction_of_motion(i,1);
     end
-    
-    output = abs(output);
+    output  = direction_of_motion;
 end
 
 function [output] = calculate_angle(origin, x_pos, y_pos, iterator)
@@ -112,7 +111,7 @@ function [output] = post_processing(origin, x_pos, y_pos, direction_of_motion)
         if_CCW = determine_if_candidate_for_CCW(y_pos, i, quadrant);
         
         if (if_CCW == 1)
-            direction_of_motion(i,1) = 360 - direction_of_motion(i,1);
+            direction_of_motion(i,1) =  360 - direction_of_motion(i,1);
         end
     end
     output = direction_of_motion;
