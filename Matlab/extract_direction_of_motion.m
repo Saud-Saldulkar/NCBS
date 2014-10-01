@@ -1,4 +1,6 @@
 function [output] = extract_direction_of_motion(file_no, coordinate_file)
+% Extract direction of motion w.ref. to the method in the Buchanan paper
+
     file_name = strcat('n', int2str(file_no), '.mat');
     load(file_name);
     load(coordinate_file);
