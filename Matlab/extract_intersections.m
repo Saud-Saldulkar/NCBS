@@ -52,6 +52,8 @@ function [count, x_i, y_i] = extract_intersections(file_no, bin_size)
         
         count(iterator, 1) = buf_count;
         iterator = iterator + 1;
+        
+        [x_i, y_i] = extract_unique_values(x_i, y_i);
     end
 end
 
