@@ -1,4 +1,11 @@
 function [total_count, time_index, intersect_x, intersect_y] = extract_circular_movements(file_no, bin_size1, bin_size2)
+% extract circular movements based on intersection. uses bin pairs as two
+% input sets to locate euclidean intersection
+% ideally: bin_size1 = 50 and bin_size_2 = 100
+% total count = total number of intersects
+% time_index = time series of intersect counts per bin_size1
+% intersect_x & intersect_y = all X and Y coordinates in a vertical
+% concatenation
 
     file_name = strcat('n', int2str(file_no), '.mat');
     load(file_name);
