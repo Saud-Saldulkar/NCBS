@@ -1,10 +1,10 @@
-function plot_returncount_greybar(returns_index)
+function plot_returncount_greybar(returns_index, max_frame)
     % Plot returns count grey bar from an indexed data
     whitebg([0.9,0.9,0.9]);
     bar(returns_index, 'k')
     
     
-    xlim([0 7000]);
+    xlim([0 max_frame]);
     ylim([0 1]);
 
     set(gca, 'ytick', []);
