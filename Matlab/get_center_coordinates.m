@@ -1,4 +1,19 @@
 function [center_x, center_y, return_count] = get_center_coordinates(file_name, spatial_threshold, returns_count_threshold, manual_count)
+% Function to calculate center coordinates based on first data point in the
+% data set.
+
+% Description of input arguments:
+
+% file_name - e.g. n1.mat
+
+% spatial_threshold - circular area from the center of the arena that need
+% to be assesed for this function e.g. 2 to 15 Eucliden Distance
+
+% returns_count_threshold - tolerence threshod for the returns count 
+% e.g. (+ - 1)
+
+% manual_count - actual manual count to be used as feed forward reference.
+
     load(file_name);
     
     origin_x = x_pos(1,1);
