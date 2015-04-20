@@ -3,17 +3,18 @@ clc;
 clear all;
 close all;
 
+% -----------------------------------
 no_files = 10;
-data_size = 45;  % first (x) secs
+start_frame = 1000;
+end_frame = 2000;
+% -----------------------------------
 
 for i = 1:no_files
    file_name = strcat('n', int2str(i), '.mat');
    load(file_name);
-   
-   no_frames = floor(((length(x_pos) / 180) * data_size));
-   
-   x_pos = x_pos(1:no_frames,1);
-   y_pos = y_pos(1:no_frames,1);
+     
+   x_pos = x_pos(start_frame:end_frame,1);
+   y_pos = y_pos(start_frame:end_frame,1);
    
    save(file_name, 'x_pos', 'y_pos');
 end
