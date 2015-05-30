@@ -3,7 +3,10 @@ function varargout = heatmap(x1,x2,varargin)
 %   HEATMAP(var1,var2)
 %   h = HEATMAP(var1,var2)
 %   [h,c] = HEATMAP(var1,var2)
-%   
+% -------------------------------------------------
+% Usage Example: heatmap(x, y, 'colormap', 'jet');
+% Also remember to set [edit/colormap/colordatamax] to 100 (or someother desired max threshold)
+% -------------------------------------------------
 % Inputs: 
 %     x1, x2, are column (m-by-1) vectors of data. They 
 %             must be identical in size.
@@ -71,9 +74,6 @@ function varargout = heatmap(x1,x2,varargin)
 %             'lim',{[-6 20] [-6 20]},...
 %             'colormap','hsv') ;
 % colorbar
-%
-% % Michael Vijay Saha, May 16 2013
-
 %% Init vars
 tickdefx = 0 ;
 tickdefy = 0 ;
